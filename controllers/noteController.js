@@ -20,7 +20,7 @@ exports.getNotes = async (req, res) => {
   }
 };
 
-exports.deleteNote = async (res, res) => {
+exports.deleteNote = async (req, res) => {
   try {
     await Note.findByIdAndDelete(req.params.id);
     res.status(200).send();
